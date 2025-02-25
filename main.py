@@ -21,7 +21,7 @@ llm_choice = [
 st.set_page_config(page_title='Ask Questions about Machine Learning')
 
 st.sidebar.title('Ask Questions about Machine Learning')
-llm_name = st.sidebar.selectbox('Language model', ['mistral.mistral-7b-instruct-v0:2'])
+llm_name = st.sidebar.selectbox('Language model', llm_choice)
 max_tokens = st.sidebar.number_input('max_tokens', min_value=0, value=4096)
 temperature = st.sidebar.number_input('temperature', min_value=0.0, value=0.7)
 top_p = st.sidebar.number_input('top_p', min_value=0.0, max_value=1.0, value=0.8)
