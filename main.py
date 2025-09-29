@@ -54,5 +54,5 @@ if st.button('Ask!'):
         'source': os.path.basename(item['metadata']['source']),
         'page': item['metadata']['page'],
         'page_content': item['page_content']
-    } for item in result_dict['source_documents']]
+    } for item in result_dict['context']]
     st.dataframe(pd.DataFrame.from_records(sources))
